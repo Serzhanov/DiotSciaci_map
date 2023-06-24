@@ -1,0 +1,5 @@
+folium==0.14.0
+numpy==1.25.0
+pandas==2.0.2
+Requests==2.31.0
+Shapely==2.0.1
