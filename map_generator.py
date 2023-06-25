@@ -51,7 +51,11 @@ def open_map(df,indexJ):
         # Create a popup with additional information
         popup_text = f'Risk Level: {risk_level_mapping.get(risk_level)}'
         for i in range(1, 10):
-            phenomenon = phenomenon_mapping.get(row[f'phenomenon_{i}'])
+            isPhenomenon=row[f'phenomenon_{i}']
+            if isPhenomenon==1:
+                phenomenon = phenomenon_mapping.get(i)
+            else:
+                phenomenon = "None"
             popup_text += f'<br>Phenomenon {i}: {phenomenon}'
 
         popup = folium.Popup(popup_text, max_width=250)
